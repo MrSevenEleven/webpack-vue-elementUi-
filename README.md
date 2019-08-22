@@ -49,7 +49,8 @@ this.$route.query
 Vue.prototype.list = list;  
 
 
-### package.json  
+### package.json    
+
 {  
   "name": "practice1",  
   "version": "1.0.0",  
@@ -107,7 +108,7 @@ Vue.prototype.list = list;
   ]  
 }  
 
-###babelrc  
+###babelrc        
 
 {  
     "presets":[["@babel/preset-env", {  
@@ -129,7 +130,7 @@ Vue.prototype.list = list;
 }  
 
   
-###webpack.config.js  
+###webpack.config.js         
 
 const path = require("path");   
 //node的path模块，提供了一些处理路径的方法，如path.join("/aaa","/bbb",...)，简单的字符串连接；path.resolved("./aaa","../bbb")按顺序依次以相对路径的方式解 析。__dirname变量表示当前js的绝对路径，"./"会返回当前执行执行node命令的路径
@@ -225,7 +226,8 @@ module.exports={
 
 
 
-###入口文件main.js  
+###入口文件main.js    
+
 引入相关模块，如  
 import Vue from "vue";  
 import Router from "vue-router";  
@@ -278,4 +280,4 @@ new Vue({
 });  
 
   
-<!-- vue相关 -->  
+### vue相关
