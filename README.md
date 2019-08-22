@@ -1,6 +1,7 @@
 # 纪要
 
-##路由、组件通信
+### 路由、组件通信
+**路由、组件通信**
 一、通过路由带参数进行传值
 this.$router.push({name:"路由配置里的路由名",params:{传递的数据}});
 this.$router.push({name:"路由配置里的路由名",query:{传递的数据}});
@@ -25,7 +26,6 @@ this.$route.query
 				}
 				...
 				}
-
 	子传父：子组件通过emit触发父组件里的一个方法，父组件通过方法带的参数获取参数
 		子组件触发：this.$emit("childevent",params数据)
 		父组件接收：<child @childevent="parentfunc"></child>
@@ -50,8 +50,8 @@ this.$route.query
 Vue.prototype.list = list;
 
 
-##package.json
-{
+## package.json
+`{
   "name": "practice1",
   "version": "1.0.0",
   "description": "",
@@ -106,11 +106,11 @@ Vue.prototype.list = list;
     "> 1%",
     "last 2 versions"
   ]
-}
+}`
 
 ##babelrc
 
-{
+`{
     "presets":[["@babel/preset-env", {
     //@babel/polyfill配置，默认为false,不启用，如果import或配置entry引入，会无视browserlist将polyfill全部加载;entry:import方式引入，会
     根据browserlist过滤出需要的polyfill;usage:不需要手动引入，会根据 browserlist + 业务代码使用到的新 API 按需进行 polyfill
@@ -128,23 +128,19 @@ Vue.prototype.list = list;
         ]
     ]
 }
-
+`
 
 ##webpack.config.js
-
+`
 const path = require("path");
 //node的path模块，提供了一些处理路径的方法，如path.join("/aaa","/bbb",...)，简单的字符串连接；path.resolved("./aaa","../bbb")按顺序依次以相对路径的方式解析。__dirname变量表示当前js的绝对路径，"./"会返回当前执行执行node命令的路径
 const htmlwebpackplugin = require("html-webpack-plugin");//html插件
----
 const extracttextplugin = require("extract-text-webpack-plugin");//css文件生成插件
 const scssextract=new extracttextplugin({//多个输出css文件时，创建多个实例
     filename:"font/[name].iconfont.css"
 });
----
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");//清除文件目录插件
----
 const {VueLoaderPlugin} = require("vue-loader");//vue插件
----
 module.exports={
 	//单入口
 	entry:"./src/main.js",
@@ -229,7 +225,7 @@ module.exports={
 };
 
 
-
+`
 ##入口文件main.js
 引入相关模块，如
 import Vue from "vue";
@@ -256,7 +252,7 @@ Vue.use(Router);
 
 
 //路由配置
-let router = new Router({
+`let router = new Router({
     routes: [{
         path: "/",
         name: "list",
@@ -274,13 +270,13 @@ let router = new Router({
         // component: () => import("../component/Completed.vue")
     }]
 });
-
+`
 ///创建vue实例
-new Vue({
+`new Vue({
     router,
     el: "#app",
     render: h => h(App)
 });
-
+`
 
 <!-- vue相关 -->
