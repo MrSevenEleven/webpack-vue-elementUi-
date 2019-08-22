@@ -1,18 +1,18 @@
 # 纪要
 
-### 路由、组件通信
-**路由、组件通信**
-一、通过路由带参数进行传值
-this.$router.push({name:"路由配置里的路由名",params:{传递的数据}});
-this.$router.push({name:"路由配置里的路由名",query:{传递的数据}});
-this.$router.push({path:"路由配置里的路径名",params:{传递的数据}});
-this.$router.push({path:"路由配置里的路径名",query:{传递的数据}});不成功
-params传参不显示在url，但F5刷新参数会被清除
-query传参显示在url，F5刷新参数不会被清除
+### 路由、组件通信  
 
-调用参数：
-this.$route.params
-this.$route.query
+一、通过路由带参数进行传值  
+this.$router.push({name:"路由配置里的路由名",params:{传递的数据}});  
+this.$router.push({name:"路由配置里的路由名",query:{传递的数据}});  
+this.$router.push({path:"路由配置里的路径名",params:{传递的数据}});  
+this.$router.push({path:"路由配置里的路径名",query:{传递的数据}});不成功  
+params传参不显示在url，但F5刷新参数会被清除  
+query传参显示在url，F5刷新参数不会被清除  
+
+调用参数：   
+this.$route.params  
+this.$route.query  
 
 二、父子传参
 	父传子：父组件在调用子组件是传递参数，子组件通过props接受
