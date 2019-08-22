@@ -50,7 +50,7 @@ Vue.prototype.list = list;
 
 
 ### package.json  
-`{  
+{  
   "name": "practice1",  
   "version": "1.0.0",  
   "description": "",  
@@ -105,11 +105,11 @@ Vue.prototype.list = list;
     "> 1%",  
     "last 2 versions"  
   ]  
-}`  
+}  
 
 ###babelrc  
 
-`{  
+{  
     "presets":[["@babel/preset-env", {  
     //@babel/polyfill配置，默认为false,不启用，如果import或配置entry引入，会无视browserlist将polyfill全部加载;entry:import方式引入，会  
     根据browserlist过滤出需要的polyfill;usage:不需要手动引入，会根据 browserlist + 业务代码使用到的新 API 按需进行 polyfill
@@ -127,10 +127,10 @@ Vue.prototype.list = list;
         ]  
     ]  
 }  
-`
+
   
 ###webpack.config.js  
-`
+
 const path = require("path");   
 //node的path模块，提供了一些处理路径的方法，如path.join("/aaa","/bbb",...)，简单的字符串连接；path.resolved("./aaa","../bbb")按顺序依次以相对路径的方式解 析。__dirname变量表示当前js的绝对路径，"./"会返回当前执行执行node命令的路径
 const htmlwebpackplugin = require("html-webpack-plugin");//html插件  
@@ -224,7 +224,7 @@ module.exports={
 };  
 
 
-`
+
 ###入口文件main.js  
 引入相关模块，如  
 import Vue from "vue";  
@@ -251,7 +251,7 @@ Vue.use(Router);
 
   
 //路由配置  
-`let router = new Router({  
+let router = new Router({  
     routes: [{  
         path: "/",  
         name: "list",  
@@ -269,13 +269,13 @@ Vue.use(Router);
         // component: () => import("../component/Completed.vue")  
     }]  
 });  
-`
+
 ///创建vue实例  
-`new Vue({  
+new Vue({  
     router,  
     el: "#app",  
     render: h => h(App)  
 });  
-`
+
   
 <!-- vue相关 -->  
