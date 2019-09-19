@@ -51,7 +51,7 @@ Vue.prototype.list = list;
 ```
 
 ### package.json    
-```json
+```javascript
 {  
   "name": "practice1",  
   "version": "1.0.0",  
@@ -110,7 +110,7 @@ Vue.prototype.list = list;
 }  
 ```
 ###babelrc        
-```json
+```javascript
 {  
     "presets":[["@babel/preset-env", {  
     //@babel/polyfill配置，默认为false,不启用，如果import或配置entry引入，会无视browserlist将polyfill全部加载;entry:import方式引入，会  
