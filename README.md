@@ -1,8 +1,8 @@
-```html
+
 # 纪要
 
 ### 路由、组件通信  
-
+```html
 一、通过路由带参数进行传值  
 this.$router.push({name:"路由配置里的路由名",params:{传递的数据}});  
 this.$router.push({name:"路由配置里的路由名",query:{传递的数据}});  
@@ -48,10 +48,10 @@ this.$route.query
 五、通过设置 Session Storage缓存的形式进行传递  
 六、在Vue的prototype中添加变量属性存储数据  
 Vue.prototype.list = list;  
-
+```
 
 ### package.json    
-
+```html
 {  
   "name": "practice1",  
   "version": "1.0.0",  
@@ -108,9 +108,9 @@ Vue.prototype.list = list;
     "last 2 versions"  
   ]  
 }  
-
+```
 ###babelrc        
-
+```html
 {  
     "presets":[["@babel/preset-env", {  
     //@babel/polyfill配置，默认为false,不启用，如果import或配置entry引入，会无视browserlist将polyfill全部加载;entry:import方式引入，会  
@@ -129,10 +129,10 @@ Vue.prototype.list = list;
         ]  
     ]  
 }  
-
+```
   
 ###webpack.config.js         
-
+```html
 const path = require("path");   
 //node的path模块，提供了一些处理路径的方法，如path.join("/aaa","/bbb",...)，简单的字符串连接；path.resolved("./aaa","../bbb")按顺序依次以相对路径的方式解 析。__dirname变量表示当前js的绝对路径，"./"会返回当前执行执行node命令的路径
 const htmlwebpackplugin = require("html-webpack-plugin");//html插件  
@@ -224,11 +224,11 @@ module.exports={
     },  
     mode: "development"//生产开发模式设置  
 };  
-
+```
 
 
 ###入口文件main.js    
-
+```html
 引入相关模块，如  
 import Vue from "vue";  
 import Router from "vue-router";  
@@ -278,9 +278,10 @@ new Vue({
     router,  
     el: "#app",  
     render: h => h(App)  
-});  
+});
+```
 
-  
+```html  
 ### vue相关
 
 ```
